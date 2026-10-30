@@ -1504,21 +1504,14 @@ TL_help_configSimple *Datacenter::decodeSimpleConfig(NativeByteBuffer *buffer) {
     }
 
     static std::string public_key =
-            "-----BEGIN RSA PUBLIC KEY-----
-"
-                    "MIIBCgKCAQEAvKLEOWTzt9Hn3/9Kdp/RdHcEhzmd8xXeLSpHIIzaXTLJDw8BhJy1
-"
-                    "jR/iqeG8Je5yrtVabqMSkA6ltIpgylH///FojMsX1BHu4EPYOXQgB0qOi6kr08iX
-"
-                    "ZIH9/iOPQOWDsL+Lt8gDG0xBy+sPe/2ZHdzKMjX6O9B4sOsxjFrk5qDoWDrioJor
-"
-                    "AJ7eFAfPpOBf2w73ohXudSrJE0lbQ8pCWNpMY8cB9i8r+WBitcvouLDAvmtnTX7a
-"
-                    "khoDzmKgpJBYliAY4qA73v7u5UIepE8QgV0jCOhxJCPubP8dg+/PlLLVKyxU5Cdi
-"
-                    "QtZj2EMy4s9xlNKzX8XezE0MHEa6bQpnFwIDAQAB
-"
-                    "-----END RSA PUBLIC KEY-----"";
+            "-----BEGIN RSA PUBLIC KEY-----\n"
+                    "MIIBCgKCAQEAvKLEOWTzt9Hn3/9Kdp/RdHcEhzmd8xXeLSpHIIzaXTLJDw8BhJy1\n"
+                    "jR/iqeG8Je5yrtVabqMSkA6ltIpgylH///FojMsX1BHu4EPYOXQgB0qOi6kr08iX\n"
+                    "ZIH9/iOPQOWDsL+Lt8gDG0xBy+sPe/2ZHdzKMjX6O9B4sOsxjFrk5qDoWDrioJor\n"
+                    "AJ7eFAfPpOBf2w73ohXudSrJE0lbQ8pCWNpMY8cB9i8r+WBitcvouLDAvmtnTX7a\n"
+                    "khoDzmKgpJBYliAY4qA73v7u5UIepE8QgV0jCOhxJCPubP8dg+/PlLLVKyxU5Cdi\n"
+                    "QtZj2EMy4s9xlNKzX8XezE0MHEa6bQpnFwIDAQAB\n"
+                    "-----END RSA PUBLIC KEY-----";
 
     BIO *keyBio = BIO_new(BIO_s_mem());
     BIO_write(keyBio, public_key.c_str(), (int) public_key.length());
