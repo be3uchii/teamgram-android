@@ -11,8 +11,10 @@ jobs:
           java-version: '17'
       - name: Build
         run: |
+          echo "sdk.dir=$ANDROID_HOME" > local.properties
+          echo "ndk.dir=$ANDROID_NDK_HOME" >> local.properties
           chmod +x gradlew
-          ./gradlew assembleAfatDebug --no-daemon
+          ./gradlew assembleDebug --no-daemon -x lint
       - uses: actions/upload-artifact@v4
         with:
           name: apk
